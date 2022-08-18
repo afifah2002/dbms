@@ -11,4 +11,29 @@ create table activity(a_id varchar(10),a_date date,duration int,a_name varchar(3
 create table participated(a_id varchar(10),usn varchar(10),primary key(a_id,usn),foreign key(a_id) references activity(a_id),foreign key(usn) references student(usn));
 
 
+use student_activity;
+insert into department values('d01','123456','h01');
+insert into department values('d02','123457','h02');
+insert into department values('d03','123458','h03');
+select * from department;
+
+insert into faculty values('f01','Jack','d01');
+insert into faculty values('f02','Jenny','d02');
+insert into faculty values('f03','Sandra','d03');
+select * from faculty;
+
+
+insert into student values('s01','student1','student1@gmail.com',4,'d01','f01');
+insert into student values('s02','student2','student2@gmail.com',2,'d02','f02');
+insert into student values('s03','student3','student3@gmail.com',6,'d03','f01');
+select*from student;
+
+insert into student_mobile values('s01','654321');
+insert into student_mobile values('s02','754321');
+insert into student_mobile values('s03','854321');
+
+insert into meeting values('m01','2022-06-04','activity discussion','decided activities','f01');
+insert into meeting values('m02','2022-04-04','activity introduction','form filling','f02');
+insert into meeting values('m03','2022-05-04','presentation','evaluated','f03');
+
 
